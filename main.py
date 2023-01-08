@@ -51,10 +51,12 @@ class IncClass:
 
 async def main():
     try:
-        now = datetime.datetime.today()
-        path = os.path.dirname(os.path.realpath(__file__))
-        log_filename = path + now.strftime("/logs/%d.%m.%Y.log")
-        logging.basicConfig(filename=log_filename, filemode='a', level=logging.INFO, format='%(asctime)s %(levelname)s %(message)s')
+        # now = datetime.datetime.today()
+        # path = os.path.dirname(os.path.realpath(__file__))
+        # log_filename = path + now.strftime("/logs/%d.%m.%Y.log")
+        # logging.basicConfig(filename=log_filename, filemode='a', level=logging.INFO, format='%(asctime)s %(levelname)s %(message)s')
+        logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s %(message)s')
+
 
         logging.info('init')
         env_rpc_key = os.environ['RPC_KEY']
